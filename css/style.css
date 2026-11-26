@@ -103,39 +103,68 @@ body {
 a { color: var(--accent); }
 
 /*nav*/
-.site-header { background: var(--accent); color: var(--accent-ink); }
-.site-header .inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding-block: 14px;
+.site-header {
+  position: relative;
+  z-index: 20;
+  padding-top: 18px;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.site-header .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 28px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 8px 24px;
+  background: var(--nav-bg);
+  border: 1px solid var(--line);
+  border-radius: 27px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
 }
-.logo { 
+.logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-}
-
-.logo img { 
-  display: block; 
-  width: 36px;
-  height: 36px;
-}
-nav { display: flex; flex-wrap: wrap; gap: 4px; }
-nav a {
-  color: var(--accent-ink);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
   text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 6px;
 }
-nav a:hover { text-decoration: underline; }
-nav a[aria-current="page"] { background: rgba(127, 127, 127, 0.28); }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover { color: var(--accent); background: var(--accent-soft); }
+nav a[aria-current="page"] {
+  color: var(--accent-ink);
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent));
+}
+.site-header .theme-toggle {
+  color: var(--ink);
+  border: 2px solid var(--line);
+  padding: 8px 16px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.site-header .theme-toggle:hover { background: var(--accent-soft); }
+
+@media (max-width: 760px) {
+  .site-header { padding-top: 10px; }
+  .site-header .inner { padding: 12px 16px; border-radius: 20px; }
+  .logo { font-size: 1.5rem; }
+  nav a { padding: 8px 12px; font-size: 0.95rem; }
+  .site-header .theme-toggle { margin-left: 0; }
+}
 
 /*layout*/
 main {

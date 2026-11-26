@@ -391,3 +391,206 @@ a.tag:hover { text-decoration: underline; }
 }
 .aupp-box h4 { margin: 12px 0 4px; }
 .aupp-box p { margin: 4px 0; }
+
+body[data-page="home"] .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+main.home-main { max-width: none; padding: 0; }
+
+/* ---------- hero ---------- */
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 7.5% 110px;
+  background: var(--hero-bg);
+}
+.home-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 24px;
+}
+.home-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+.home-eyebrow .sparkle { color: #f0b84b; font-size: 1.3rem; }
+.home-hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2.6rem, 4.3vw, 4.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  color: var(--ink);
+}
+.home-hero h1 span { color: var(--accent); }
+
+.check-list { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 12px; }
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 500;
+}
+.check {
+  flex: 0 0 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: var(--accent-ink);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.intro-card {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 17px;
+  align-items: center;
+  padding: 22px 27px;
+  border-radius: 25px;
+  background: var(--panel);
+}
+.bulb { width: 48px; height: 58px; color: var(--accent); }
+.bulb svg { width: 100%; height: 100%; }
+.intro-card h2 {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  letter-spacing: -0.02em;
+}
+.intro-card p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+.home-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+.home-actions .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  background: linear-gradient(110deg, var(--accent-hover), var(--accent));
+  box-shadow: 0 8px 18px rgba(37, 103, 220, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.home-actions .button-secondary {
+  background: var(--card);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+.home-actions .button:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(37, 103, 220, 0.25); }
+.home-actions .button-secondary:hover { background: var(--accent-soft); box-shadow: inset 0 0 0 2px var(--accent); }
+
+/* illustration */
+.home-art { position: relative; display: flex; align-items: center; justify-content: center; min-width: 0; }
+.home-orbit {
+  position: absolute;
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--orbit), transparent 68%);
+}
+.home-art img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(100%, 560px);
+  height: auto;
+  border-radius: 32px;
+  mix-blend-mode: multiply;
+}
+:root[data-theme="dark"] .home-art img { mix-blend-mode: normal; opacity: 0.92; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .home-art img { mix-blend-mode: normal; opacity: 0.92; }
+}
+
+/* soft waves at the bottom of the hero */
+.home-wave {
+  position: absolute;
+  left: -5%;
+  width: 110%;
+  height: 100px;
+  border-radius: 50% 50% 0 0 / 55% 55% 0 0;
+  pointer-events: none;
+}
+.home-wave-back { bottom: -45px; background: var(--wave-back); transform: rotate(-3deg); }
+.home-wave-front { bottom: -76px; background: var(--section-bg); transform: rotate(1.5deg); }
+
+/* ---------- how it works ---------- */
+.how { position: relative; z-index: 3; padding: 22px 7.5% 85px; text-align: center; background: var(--section-bg); }
+.how-kicker { display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 1.9rem; }
+.how-kicker span { width: 75px; height: 2px; background: linear-gradient(90deg, transparent, #9fc2ff); }
+.how-kicker span:last-child { transform: rotate(180deg); }
+.how h2 { margin: 4px 0 2px; font-size: 2.3rem; letter-spacing: -0.03em; }
+.how-sub { margin: 0; color: var(--muted); font-size: 1.1rem; }
+.how-steps {
+  max-width: 1120px;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+.how-card {
+  position: relative;
+  padding: 29px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+.how-num { position: absolute; top: 22px; right: 24px; color: var(--muted); opacity: 0.5; font-weight: 800; }
+.how-icon {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--accent-soft);
+  font-size: 1.6rem;
+}
+.how-icon { color: var(--accent); }
+.how-icon svg { width: 26px; height: 26px; }
+.how-cap { display: inline-flex; color: var(--accent); }
+.how-cap svg { width: 34px; height: 34px; }
+.how-card h3 { margin: 18px 0 8px; font-size: 1.2rem; }
+.how-card p { margin: 0; color: var(--muted); line-height: 1.7; }
+
+footer { background: var(--footer-bg); border-top: 0; }
+
+/* ---------- home: smaller screens ---------- */
+@media (max-width: 1000px) {
+  body[data-page="home"] .site-header { position: relative; }
+  .home-hero { padding: 40px 6% 90px; }
+  .home-hero-inner { grid-template-columns: 1fr; }
+  .home-art { max-width: 440px; margin: 0 auto; }
+  .how-steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .intro-card { grid-template-columns: 44px 1fr; gap: 12px; padding: 18px; border-radius: 19px; }
+  .bulb { width: 40px; height: 50px; }
+  .check-list li { align-items: flex-start; }
+  .home-wave { height: 65px; }
+  .how { padding-bottom: 60px; }
+  .how h2 { font-size: 1.9rem; }
+}

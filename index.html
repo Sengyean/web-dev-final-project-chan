@@ -25,27 +25,75 @@
   </header>
 
   <main>
-    <section class="hero">
-      <ul class="questions">
-        <li>Are you looking for what to study?</li>
-        <li>Do you know what each major actually teaches?</li>
-        <li>Wondering if you will need calculus, programming or a lot of reading?</li>
-        <li>Not sure where to study it?</li>
-      </ul>
-      <h1>Chan helps you find out.</h1>
-      <p class="lead">Pick the subjects you are good at and the things you enjoy. Chan shows majors worth looking into, explains what each one covers and requires, and lists the universities that offer it.</p>
-      <div class="hero-actions">
-        <a class="button" href="find.html">Find my major</a>
-        <a class="button button-secondary" href="majors.html">Browse all majors</a>
+      <main class="home-main">
+    <section class="home-hero">
+      <div class="home-hero-inner">
+        <div class="home-copy">
+          <h1>Are you looking for<br> <span>what to study?</span></h1>
+
+          <ul class="check-list">
+            <li><span class="check">✓</span><span>Do you know what each major actually teaches?</span></li>
+            <li><span class="check">✓</span><span>Wondering if you will need calculus, programming or a lot of reading?</span></li>
+            <li><span class="check">✓</span><span>Not sure where to study it?</span></li>
+          </ul>
+
+          <div class="intro-card">
+            <div class="bulb" aria-hidden="true">
+              <svg viewBox="0 0 48 60"><path d="M24 4a17 17 0 0 0-10 31c3 2 4 5 4 8h12c0-3 1-6 4-8A17 17 0 0 0 24 4Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M18 48h12M19 54h10" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h2>Chan helps you find out.</h2>
+              <p>Pick the subjects you are good at and the things you enjoy. Chan shows majors worth looking into, explains what each one covers and requires, and lists the universities that offer it.</p>
+            </div>
+          </div>
+
+          <div class="home-actions">
+            <a class="button" href="find.html">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8"/></svg>
+              Find my major
+            </a>
+            <a class="button button-secondary" href="majors.html">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg>
+              Browse all majors
+            </a>
+          </div>
+        </div>
+
+        <div class="home-art">
+          <div class="home-orbit"></div>
+          <img src="images/graduation-illustration.png" alt="A graduation cap resting on a stack of books">
+        </div>
       </div>
+      <div class="home-wave home-wave-back"></div>
+      <div class="home-wave home-wave-front"></div>
     </section>
 
-    <h2>How it works</h2>
-    <ol class="steps">
-      <li><strong>1. Choose</strong><br>Pick the subjects you are good at and the things you are interested in.</li>
-      <li><strong>2. Match</strong><br>Chan ranks majors by how many of your choices they match.</li>
-      <li><strong>3. Explore</strong><br>Read what each major covers and requires, then see which universities offer it.</li>
-    </ol>
+    <section class="how">
+      <div class="how-kicker"><span></span><i class="how-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c3.5 3 8.5 3 12 0v-4.5"/><path d="M22 9v6"/></svg></i><span></span></div>
+      <h2>How it works</h2>
+      <p class="how-sub">Simple steps to find your perfect major</p>
+      <div class="how-steps">
+        <article class="how-card">
+          <div class="how-num">01</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19l-4 1Z"/><path d="M14.5 6.5l3 3"/></svg></div>
+          <h3>Choose your interests</h3>
+          <p>Tell us which subjects you enjoy and what you are good at.</p>
+        </article>
+        <article class="how-card">
+          <div class="how-num">02</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg></div>
+          <h3>Explore matching majors</h3>
+          <p>Discover study paths that fit your interests and strengths.</p>
+        </article>
+        <article class="how-card">
+          <div class="how-num">03</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/></svg></div>
+          <h3>Find a university</h3>
+          <p>Compare universities and see where you can study your major.</p>
+        </article>
+      </div>
+    </section>
+  </main>
   </main>
 
   <footer>Chan - INFO 250 Web Development I, Fall 2026</footer>

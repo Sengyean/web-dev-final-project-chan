@@ -111,7 +111,7 @@ a { color: var(--accent); }
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 .site-header .inner {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 14px 28px;
   display: flex;
@@ -398,7 +398,7 @@ body[data-page="home"] .site-header {
   left: 0;
   right: 0;
 }
-main.home-main { max-width: none; padding: 0; }
+body[data-page="home"] main { max-width: none; margin: 0; padding: 0; }
 
 /* ---------- hero ---------- */
 .home-hero {
@@ -410,7 +410,7 @@ main.home-main { max-width: none; padding: 0; }
 .home-hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 1320px;
+  max-width: 1600px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -514,7 +514,7 @@ main.home-main { max-width: none; padding: 0; }
   position: relative;
   z-index: 1;
   display: block;
-  width: min(100%, 560px);
+  width: min(100%, 640px);
   height: auto;
   border-radius: 32px;
   mix-blend-mode: multiply;
